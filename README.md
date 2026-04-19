@@ -1,2 +1,2 @@
 # SmartQuery
-AI applicationto work with SQL databases without executing queries manually 
+AI application to work with SQL databases without executing queries manually 
