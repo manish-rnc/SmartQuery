@@ -25,6 +25,39 @@ st.set_page_config(
 st.markdown(
     """
     <style>
+    /* ── Force Dark Theme & Colors ── */
+    :root {
+        --primary-color: #1E88E5;
+        --bg-color: #0E1117;
+        --secondary-bg-color: #1A2332;
+        --text-color: #E0E0E0;
+    }
+
+    [data-testid="stAppViewContainer"] {
+        background-color: var(--bg-color) !important;
+        color: var(--text-color) !important;
+    }
+
+    [data-testid="stHeader"] {
+        background-color: var(--bg-color) !important;
+    }
+
+    [data-testid="stSidebar"] {
+        background-color: var(--secondary-bg-color) !important;
+    }
+
+    /* Force text color in sidebar */
+    [data-testid="stSidebar"] *, [data-testid="stSidebar"] p, [data-testid="stSidebar"] span {
+        color: var(--text-color) !important;
+    }
+
+    /* Force primary blue on buttons and links */
+    button[kind="primary"] {
+        background-color: var(--primary-color) !important;
+        border-color: var(--primary-color) !important;
+        color: white !important;
+    }
+
     /* ── Custom chat bubbles ── */
     @keyframes fadeInUp {
         from { opacity: 0; transform: translateY(8px); }
@@ -56,7 +89,7 @@ st.markdown(
         margin-right: 4px;
     }
     .chat-bubble.assistant-bubble {
-        background: #1c1c1e;
+        background: #252a34;
         border-radius: 20px 20px 20px 4px;
         margin-left: 4px;
     }
